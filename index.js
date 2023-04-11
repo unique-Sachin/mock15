@@ -18,6 +18,6 @@ app.use("/board", boardRoutes);
 app.use("/task", taskRoutes);
 app.use("/subtask", subtaskRoutes);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, async() => {
   connection();
 });

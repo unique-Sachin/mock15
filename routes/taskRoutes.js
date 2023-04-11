@@ -15,7 +15,7 @@ taskRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-taskRoutes.get("/", async (req, res) => {
+taskRoutes.post("/", async (req, res) => {
   const { boardId } = req.body;
   try {
     if (!boardId) {

@@ -15,7 +15,7 @@ subtaskRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-subtaskRoutes.get("/", async (req, res) => {
+subtaskRoutes.post("/", async (req, res) => {
   const { taskId } = req.body;
   try {
     if (!taskId) {

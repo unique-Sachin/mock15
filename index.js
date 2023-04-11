@@ -1,4 +1,5 @@
 const app = require("express")();
+require("dotenv").config();
 const cors = require("cors");
 const { json } = require("express");
 const connection = require("./configs/db");
@@ -6,7 +7,6 @@ const boardRoutes = require("./routes/boardRoutes");
 const userRoutes = require("./routes/userRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const subtaskRoutes = require("./routes/subtaskRoutes");
-require("dotenv").config();
 app.use(cors());
 app.use(json());
 

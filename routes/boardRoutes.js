@@ -16,7 +16,7 @@ boardRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-boardRoutes.get("/", async (req, res) => {
+boardRoutes.post("/", async (req, res) => {
   const { userId } = req.body;
   try {
     if (!userId) {

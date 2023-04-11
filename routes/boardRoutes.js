@@ -2,7 +2,7 @@ const boardModel = require("../models/boardModel");
 
 const boardRoutes = require("express").Router();
 
-boardRoutes.post("/", async (req, res) => {
+boardRoutes.post("/post", async (req, res) => {
   const { name, userId } = req.body;
   try {
     if (!userId) {
@@ -16,7 +16,7 @@ boardRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-boardRoutes.post("/", async (req, res) => {
+boardRoutes.post("/get", async (req, res) => {
   const { userId } = req.body;
   try {
     if (!userId) {

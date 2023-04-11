@@ -1,7 +1,7 @@
 const taskModel = require("../models/taskModel");
 const taskRoutes = require("express").Router();
 
-taskRoutes.post("/", async (req, res) => {
+taskRoutes.post("/post", async (req, res) => {
   const { title, description, status, boardId } = req.body;
   try {
     if (!boardId) {
@@ -15,7 +15,7 @@ taskRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-taskRoutes.post("/", async (req, res) => {
+taskRoutes.post("/get", async (req, res) => {
   const { boardId } = req.body;
   try {
     if (!boardId) {

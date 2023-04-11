@@ -1,7 +1,7 @@
 const subtaskModel = require("../models/subtaskModel");
 const subtaskRoutes = require("express").Router();
 
-subtaskRoutes.post("/", async (req, res) => {
+subtaskRoutes.post("/post", async (req, res) => {
   const { title, isCompleted, taskId } = req.body;
   try {
     if (!taskId) {
@@ -15,7 +15,7 @@ subtaskRoutes.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });
-subtaskRoutes.post("/", async (req, res) => {
+subtaskRoutes.post("/get", async (req, res) => {
   const { taskId } = req.body;
   try {
     if (!taskId) {
